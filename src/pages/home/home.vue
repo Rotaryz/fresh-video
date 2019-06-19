@@ -1,27 +1,33 @@
 <template>
-  <div class="home" @touchmove.prevent>
-    <router-view style="z-index: 10"></router-view>
-    <tab></tab>
+  <div class="home">
+    <div class="container">
+
+    </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import Tab from '@components/tab/tab'
-
   const PAGE_NAME = 'HOME'
 
   export default {
     name: PAGE_NAME,
     page: {
-      title: 'Home',
-      meta: [{name: 'description', content: 'description'}]
-    },
-    components: {
-      Tab
+      title: '赞播优鲜'
     }
   }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "~@design"
+  .home
+    width: 100vw
+    min-height: 100vh
+    background: #ddd
+    display: flex
+    align-items: center
+    justify-content: center
+    .container
+      min-width: 1500px
+      height: 500px
+      background: white
 </style>

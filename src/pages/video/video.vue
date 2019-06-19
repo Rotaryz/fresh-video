@@ -3,7 +3,12 @@
     <div class="container">
       <img src="./video-bc@2x.png" alt="" class="page-bc">
       <div class="video-container">
-        <video src="./1.mp4" class="video" controls></video>
+        <video v-if="showIdx == 1" src="./1.mp4" class="video" controls preload></video>
+        <video v-if="showIdx == 2" src="2.MOV" class="video" controls preload></video>
+      </div>
+      <div class="tabs">
+        <div class="tab-item hand" @click="changeVideo(1)">商城系统1</div>
+        <div class="tab-item hand" @click="changeVideo(2)">商城系统2</div>
       </div>
     </div>
   </div>
@@ -20,7 +25,14 @@
       }
     },
     data() {
-      return {}
+      return {
+        showIdx: 1
+      }
+    },
+    methods: {
+      changeVideo(idx) {
+        this.showIdx = +idx
+      }
     }
   }
 </script>
@@ -56,6 +68,16 @@
         .video
           width: 100%
           height: 100%
+      .tabs
+        position: absolute
+        left: 50px
+        bottom: 100px
+        display: flex
+        .tab-item
+          width: 100px
+          height: 30px
+          background: white
+          margin-right: 20px
 
   .test
     height: 10px
