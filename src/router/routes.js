@@ -18,7 +18,7 @@ export default [
     component: () => lazyLoadView(import('@pages/test-page/test-page'))
   },
   {
-    path: '/home',
+    path: '/',
     name: 'home',
     component: () => lazyLoadView(import('@pages/home/home'))
   },
@@ -37,10 +37,6 @@ export default [
     name: '404',
     component: require('@pages/_404/_404').default,
     props: true
-  },
-  {
-    path: '/',
-    redirect: '/video'
   },
   {
     path: '*',
