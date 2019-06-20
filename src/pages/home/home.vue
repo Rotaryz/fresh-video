@@ -30,8 +30,8 @@
   const PAGE_NAME = 'HOME'
   const LIST = [
     {icon: './imgs/icon-mall@2x.png', txt: '商城系统', english: 'MALL SYSTEM', type: 'mall'},
-    {icon: './imgs/icon-data@2x.png', txt: '数据系统', english: 'DATA SYSTEM', type: 'data'},
-    {icon: './imgs/icon-supplychain@2x.png', txt: '供应链系统', english: 'SUPPLY CHAIN SYSTEM', type: 'supply'}
+    {icon: './imgs/icon-supplychain@2x.png', txt: '供应链系统', english: 'SUPPLY CHAIN SYSTEM', type: 'supply'},
+    {icon: './imgs/icon-data@2x.png', txt: '数据系统', english: 'DATA SYSTEM', type: 'data'}
   ]
 
   export default {
@@ -81,6 +81,9 @@
       .container-content .content-item {
         padding: 52px 0 58px
       }
+      .container-content .content-item:hover {
+        top: -12.5px
+      }
       .container-content .content-item .item-line{
         width: 50px
         height: 4px
@@ -128,6 +131,9 @@
       }
       .container-content .content-item {
         padding: 4.3vw 0 4.8vw
+      }
+      .container-content .content-item:hover {
+        top: -1.04vw
       }
       .container-content .content-item .item-line{
         width: 4.1vw
@@ -192,6 +198,11 @@
         background: #FFFFFF
         box-shadow: 0 2px 40px 0 #EDF0FB
         border-radius: 10px
+        position: relative
+        top: 0
+        transition: all .3s
+        &:hover
+          box-shadow: 0 2px 40px 0 #C9CEDF
         .item-line
           background: #BBF3FB
         .item-txt

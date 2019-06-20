@@ -1,9 +1,16 @@
 <template>
   <div class="video-page">
+    <img class="bc-left page-bc" src="./pic-left@2x.png" alt="">
+    <img class="bc-right page-bc" src="./pic-right@2x.png" alt="">
     <div class="container">
-      <img src="./video-bc@2x.png" alt="" class="page-bc">
+      <div class="container-bc">
+        <img class="bc-img" src="./pic-playbox@2x.png" alt="">
+      </div>
       <div class="logo-icon">
         <img class="icon-img" src="./pic-logo_play@2x.png" alt="">
+      </div>
+      <div class="icon-people">
+        <img class="people-img" src="./pic-people@2x.png" alt="">
       </div>
       <div class="video-container">
         <video :src="videoUrl" class="video" controls preload></video>
@@ -92,15 +99,45 @@
     min-height: 100vh
     display: flex
     align-items: center
-    background: #f8f8f8
+    background: #798DF4
+    position: relative
+    @media screen and (max-width: 1200px) {
+      .bc-left {
+        width: 438px
+      }
+      .bc-right {
+        width: 321px
+      }
+    }
+    @media screen and (min-width: 1201px) {
+      .bc-left {
+        width: 36.51vw
+      }
+      .bc-right {
+        width: 26.77vw
+      }
+    }
+    .page-bc
+      position: absolute
+      z-index: 10
+    .bc-left
+      left: 0
+      top: 0
+    .bc-right
+      right: 0
+      bottom: 0
     .container
       width: 100%
       height: 0
       padding-top: 56.25%
       position: relative
+      z-index: 100
       @media screen and (max-width: 1200px) {
         .logo-icon {
           width: 125px
+        }
+        .icon-people {
+          width: 220px
         }
         .list .list-item {
           margin-right: 50px
@@ -119,6 +156,9 @@
         .logo-icon {
           width: 10.5vw
         }
+        .icon-people {
+          width: 18.33vw
+        }
         .list .list-item {
           margin-right: 4.16vw
         }
@@ -132,12 +172,21 @@
           font-size: 1.14vw
         }
       }
-      .page-bc
+      .container-bc
         position: absolute
-        left: 0
-        top: 0
-        width: 100%
-        height: 100%
+        left: 8.75%
+        top: 5.37%
+        width: 67.13%
+        .bc-img
+          width: 100%
+          height: auto
+      .icon-people
+        position: absolute
+        top: 27.54%
+        right: 8.56%
+        .people-img
+          width: 100%
+          height: auto
       .logo-icon
         position: absolute
         top: 6%
