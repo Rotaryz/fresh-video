@@ -213,19 +213,19 @@
         .list-item
           .item-title
             font-family: PingFang-SC-Bold
-            color: #FFFFFF
+            color: white
           .item-list
             display: flex
             .item-txt
-              border: 1px solid #FFFFFF
+              border: 1px solid white
               border-radius: 6px
               font-family: PingFangSC-Regular
-              color: #FFFFFF
+              color: white
               &.active
-                background: #fff
+                background: white
                 color: #515FAD
               &:hover
-                background: #fff
+                background: white
                 color: #515FAD
               &:last-child
                 margin-right: 0
