@@ -109,6 +109,7 @@
         width: 321px
       }
     }
+
     @media screen and (min-width: 1201px) {
       .bc-left {
         width: 36.51vw
