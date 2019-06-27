@@ -13,7 +13,7 @@
         <img class="people-img" src="./pic-people@2x.png" alt="">
       </div>
       <div class="video-container">
-        <video :src="videoUrl" class="video" controls preload></video>
+        <video :src="videoUrl" class="video" controls autoplay></video>
       </div>
       <div class="list">
         <div v-for="(item, index) in arr" :key="index" class="list-item">
